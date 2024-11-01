@@ -1,0 +1,108 @@
+/* Основные стили */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Заголовок сайта */
+.header {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.header p {
+  font-size: 1.2rem;
+}
+
+/* Секции с текстом */
+.intro, .features {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;  /* Адаптивная ширина */
+}
+
+/* Список преимуществ */
+.features ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.features li {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.features li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #4CAF50;
+}
+
+/* Футер */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+  margin-top: 2rem;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+  .header h1 {
+      font-size: 2rem;
+  }
+  .header p {
+      font-size: 1rem;
+  }
+  .intro, .features {
+      padding: 0.8rem;
+      margin: 1rem auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+      font-size: 1.5rem;
+  }
+  .header p {
+      font-size: 0.9rem;
+  }
+  .intro, .features {
+      padding: 0.5rem;
+      margin: 0.5rem auto;
+  }
+  .footer {
+      font-size: 0.9rem;
+  }
+}
+
+/* Анимации при прокрутке */
+.initial-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+

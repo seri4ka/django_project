@@ -16,8 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('strategies/', include('strategies.urls')),  # Подключаем urls приложения
+    path('strategies/', include('strategies.urls')),  # Подключение приложения strategies
+    path('', views.home, name='home'),  # Главная страница
 ]

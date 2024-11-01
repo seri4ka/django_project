@@ -1,0 +1,23 @@
+<!-- strategies/templates/strategies/strategy_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Catalog of Strategies</title>
+</head>
+<body>
+    <h1>Catalog of Strategies</h1>
+    <ul>
+        {% for strategy in strategies %}
+            <li>
+                <h2>{{ strategy.title }}</h2>
+                <p>{{ strategy.description }}</p>
+                <p>Price: ${{ strategy.price }}</p>
+                <p>Seller: {{ strategy.seller.username }}</p>
+            </li>
+        {% empty %}
+            <li>No strategies available at the moment.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
